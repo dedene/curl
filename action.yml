@@ -1,0 +1,19 @@
+name: 'cURL with output'
+description: 'Simple cURL action that captures the output'
+inputs:
+  url:
+    description: 'The target url'
+  args:
+    description: 'Any other cURL arguments'
+outputs:
+  curl_output:
+    description: 'The output of the cURL command'
+branding:
+  icon: 'download-cloud'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.url }}
+    - ${{ inputs.args }}
