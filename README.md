@@ -5,7 +5,7 @@ This action runs a cURL command and makes the output available for other steps.
 ## Inputs
 
 - `url`: The URL to request.
-- `args`: Additional arguments to pass to cURL.
+- `extra`: Additional arguments to pass to cURL.
 
 ## Outputs
 

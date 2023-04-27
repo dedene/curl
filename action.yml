@@ -3,7 +3,7 @@ description: 'Simple cURL action that captures the output'
 inputs:
   url:
     description: 'The target url'
-  args:
+  extra:
     description: 'Any other cURL arguments'
 outputs:
   curl_output:
@@ -16,4 +16,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.url }}
-    - ${{ inputs.args }}
+    - ${{ inputs.extra }}
