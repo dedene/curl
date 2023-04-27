@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --no-cache curl ca-certificates
+RUN apk add --no-cache curl ca-certificates openssl
 
 COPY entrypoint.sh /entrypoint.sh
 
