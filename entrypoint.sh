@@ -4,4 +4,5 @@ set -e
 
 OUTPUT=$(sh -c "curl --silent --show-error --fail $*")
 
-echo -e "curl_output<<EOF\n$OUTPUT\nEOF" | tee -a $GITHUB_OUTPUT
+delimiter="$(openssl rand -hex 8)"
+echo -e "curl_output<<${delimiter}${OUTPUT}${delimiter}" | tee -a $GITHUB_OUTPUT
