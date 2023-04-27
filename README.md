@@ -5,7 +5,6 @@ This action runs a cURL command and makes the output available for other steps.
 ## Inputs
 
 - `url`: The URL to request.
-- `extra`: Additional arguments to pass to cURL.
 
 ## Outputs
 
@@ -18,4 +17,12 @@ uses: dedene/curl@v1
 with:
   url: https://example.com
   args: -v
+```
+
+or with more complex arguments:
+
+```yaml
+uses: dedene/curl@v1
+with:
+  args: -v -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"foo":"bar"}' https://example.com
 ```
